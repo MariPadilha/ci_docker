@@ -2,24 +2,17 @@ name: Go
 
 on:
   push:
-    branches: [ '*' ]
+    branches: [ "*" ]
   pull_request:
-    branches: [ '*' ]
+    branches: [ "*" ]
 
 jobs:
 
   test:
-    runs-on: ${{ matrix.os }}
-    env:
-      HOST: localhost
-      PORT: 5432
-      USER: root
-      PASSWORD: root
-      DBNAME: root
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
-        os: ['ubuntu-latest', 'ubuntu-18.04']
     steps:
     - uses: actions/checkout@v3
 
