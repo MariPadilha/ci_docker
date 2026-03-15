@@ -11,19 +11,11 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     env:
-<<<<<<< HEAD
       HOST: localhost
       PORT: 5432
       USER: root
       PASSWORD: root
       DBNAME: root
-=======
-      DB_HOST: localhost
-      DB_PORT: 5432
-      DB_USER: root
-      DB_PASSWORD: root
-      DB_NAME: root
->>>>>>> Projeto_base
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
